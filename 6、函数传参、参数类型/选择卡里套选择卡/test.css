@@ -1,0 +1,61 @@
+div, ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+#wrap {
+    margin: 150px auto;
+    width: 900px;
+    height: 400px;
+    border-top: 1px solid black;
+}
+ul {
+    float: left;
+}
+ul li {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 97px;
+    height: 99px;
+    line-height: 100px;
+    text-align: center;
+}
+ul .active {
+    background: gray;
+}
+#wrap div {
+    position: relative;
+    float: left;
+    width: 800px;
+    height: 399px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+img {
+    width: 800px;
+    height: 399px;
+}
+.content ul {
+    display: table;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 800px;
+}
+.content li {
+    display: table-cell;
+    text-align: center;
+    margin-right: 1px;
+    width: auto;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+}
+.content .active {
+    background: red;
+}

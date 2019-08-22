@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <style>
+        div {
+            margin: 0 auto;
+            border: 1px solid black;
+            width: 900px;
+        }
+        h2 {
+            margin: 0;
+            padding: 10px 20px;
+            background: green;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            margin: 0;
+            padding: 0 20px;
+            list-style-type: none;
+            border-bottom: 1px solid black;
+        }
+        input {
+            margin: 5px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var oUl = document.getElementsByTagName('ul')[0];
+            var aLi = oUl.getElementsByTagName('li');
+
+            for(var i = 0; i < aLi.length; i++){
+                fuc(aLi[i]);
+            }
+
+            function fuc(oLi){
+                var aP = oLi.getElementsByTagName('p');
+                var aInp = oLi.getElementsByTagName('input');
+                aP[1].style.display = 'none';
+                aInp[0].onclick = function(){
+                    aP[0].style.display = 'none';
+                    aP[1].style.display = 'block';
+                    aInp[1].value = aP[0].childNodes[0].nodeValue;
+                }
+                aInp[2].onclick = function(){
+                    aP[0].style.display = 'block';
+                    aP[1].style.display = 'none';
+                    aP[0].childNodes[0].nodeValue = aInp[1].value;
+                }
+                aInp[3].onclick = function(){
+                    aP[0].style.display = 'block';
+                    aP[1].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h2>分类名称</h2>
+        <ul>
+            <li>
+                <p>妙味远程课堂<input type="button" value="点击编辑" /></p>
+                <p><input type="text" value=""/><input type="button" value="保存"><input type="button" value="取消"></p>
+            </li>
+            <li>
+                    <p>妙味远程课堂<input type="button" value="点击编辑" /></p>
+                    <p><input type="text" value=""/><input type="button" value="保存"><input type="button" value="取消"></p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

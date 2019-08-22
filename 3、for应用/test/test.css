@@ -1,0 +1,29 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    width: 550px;
+}
+li {
+    padding: 0;
+    margin: 10px 0 0 10px;
+    position: relative;
+    float: left;
+    width: 100px;
+    height: 100px;
+    background: yellow;
+    list-style: none;
+}
+div {
+    position: absolute;
+    top: 120px;
+    left: -50px;
+    width: 200px;
+    height: 100px;
+    background: red;
+    display: none;
+    z-index: 1;
+}

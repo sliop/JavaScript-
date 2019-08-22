@@ -1,0 +1,68 @@
+div, p, button, img {
+    margin: 0;
+    padding: 0;
+}
+button {
+    cursor: pointer;
+}
+
+
+div.wrap {
+    margin: 100px auto;
+    width: 600px;
+    height: 400px;
+    border: 1px solid black;
+    background: #fff;
+}
+p {
+    text-align: center;
+    font-size: 16px;
+}
+p button {
+    margin: 10px;
+}
+div.wrap div {
+    position: relative;
+    margin: 10px;
+    width: 560px;
+    height: 300px;
+    border: 10px solid #eee;
+}
+#left, #right {
+    position: absolute;
+    top: 125px;
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    color: white;
+    background: rgba(0,0,0,0.6);
+}
+#left:hover, #right:hover {
+    background: rgba(0,0,0,1);
+} 
+#left {
+    left: 10px;
+}
+#right {
+    right: 10px;
+}
+img {
+    width: 560px;
+    height: 300px;
+}
+#info, #desc {
+    position: absolute;
+    height: 30px;
+    width: 560px;
+    line-height: 30px;
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+}
+#info {
+    top: 0;
+}
+#desc {
+    bottom: 0;
+}

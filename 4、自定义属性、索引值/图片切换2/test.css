@@ -1,0 +1,40 @@
+div {
+    margin: 0;
+    padding: 0;
+}
+.wrap {
+    position: relative;
+    margin: 100px auto;
+    width: 1100px;
+    height: 500px;
+    background: #ccc;
+}
+#first {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    padding: 20px;
+    width:630px;
+    height: 400px;
+    background: white;
+}
+#first img {
+    width: 630px;
+    height: 320px;
+}
+#second {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    padding: 20px;
+    width: 330px;
+    height: 400px;
+    background: white;
+}
+#second img {
+    width: 330px;
+    height: 320px;
+}
+p {
+    text-align: center;
+}

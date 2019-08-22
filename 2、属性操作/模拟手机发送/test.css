@@ -1,0 +1,56 @@
+.div {
+    margin: 50px auto;
+    padding: 0;
+    background: #eee;
+    width: 300px;
+    border: 1px solid black;
+}
+#div {
+    margin: 0;
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-bottom: 1px solid black;
+    overflow: auto;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+#div div {
+    width: 100%;
+    clear: both;
+}
+#div img {
+    margin: 5px auto;
+    vertical-align: middle;
+}
+#div p {
+    margin: 5px 5px;
+    background: green;
+    max-width: 260px;
+    word-break: break-all;
+}
+#img {
+    margin: 2px;
+    border:1px solid black;
+    vertical-align: middle;
+}
+#text {
+    margin:2px;
+    padding: 0;
+    height: 23px;
+    width: 225px;
+    border:1px solid black;
+}
+#btn {
+    width: 40px;
+    margin: 0;
+    padding: 0;
+    height: 23px;
+    border: none;
+    outline: none;
+    background: #eee;
+}

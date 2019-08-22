@@ -1,0 +1,90 @@
+button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+p.setting {
+    font-size: 24px;
+    font-weight: bold;
+}
+#setting {
+    padding: 10px 20px;
+    background: red;
+    color: white;
+    font-size: 16px;
+}
+#div1 {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border: 5px solid black;
+}
+#div2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+#div3 {
+    position: relative;
+    top: 50%;
+    margin: -110px auto;
+    height: 200px;
+    width: 300px;
+    border: 10px solid grey;
+    background: white;
+}
+#div3 p {
+    text-align: center;
+    font-size: 18px;
+}
+#div3 button {
+    margin-right: 5px;
+    width: 35px;
+    height: 30px;
+    background: #ddd;
+    color: #666;
+}
+#div3 button:hover {
+    background: #FFcc00;
+    border: 1px solid black;
+    color: black;
+}
+button#red, button#yellow, button#blue {
+    color: white;
+}
+button#red {
+    background: yellowgreen;
+}
+button#red:hover {
+    background: red;
+    border: 1px solid black;
+}
+button#yellow {
+    background: #FF9900;
+}
+button#yellow:hover {
+    background: yellow;
+    color: black;
+    border: 1px solid black;
+}
+button#blue {
+    background: #3399FF;
+}
+button#blue:hover {
+    background: blue;
+    border: 1px solid black;
+}
+button#reset, button#confirm {
+    width: 60px;
+    background: #003399;
+    color: white;
+}
+button#reset:hover, button#confirm:hover {
+    background: #003399;
+    color: white;
+}

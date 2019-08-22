@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <script>
+        window.onload = function(){
+            var oUl = document.getElementById('list');
+            var aLi = oUl.getElementsByTagName('li');
+            var aStrong = oUl.getElementsByTagName('strong');
+            var aEm = oUl.getElementsByTagName('em');
+            var aSpan = oUl.getElementsByTagName('span');
+            var oP = document.getElementsByTagName('p')[0];
+
+            for(var i = 0; i < aLi.length; i++){
+                fn(i);
+            }
+
+            function fn(num){
+                var aInp = aLi[num].getElementsByTagName('input');
+                var n1 = Number(aStrong[num].innerHTML);
+                var n2 = parseFloat(aEm[num].innerHTML);
+                aInp[0].onclick = function(){
+                    var n3 = 0;
+                    var n4 = 0;
+                    var n5 = 0;
+                    if(n1 > 0){
+                        n1--;
+                    }
+                    aStrong[num].innerHTML = n1;
+                    aSpan[num].innerHTML = n1 * n2 + '元';
+                    for(var i = 0; i < aLi.length; i++){
+                        n3 += Number(aStrong[i].innerHTML);
+                        n4 += Number(aStrong[i].innerHTML) * parseFloat(aEm[i].innerHTML);
+                        if(n5 < parseFloat(aEm[i].innerHTML) && Number(aStrong[i].innerHTML) != 0){
+                            n5 = parseFloat(aEm[i].innerHTML);
+                        }
+                    }
+                    oP.innerHTML = '商品合计共：'+ n3 + '件，共花费了：' + n4 + '元<br />其中最贵的商品单价是：' + n5 + '元';
+                }
+                aInp[1].onclick = function(){
+                    var n3 = 0;
+                    var n4 = 0;
+                    var n5 = 0;
+                    n1++;
+                    aStrong[num].innerHTML = n1;
+                    aSpan[num].innerHTML = n1 * n2 + '元';
+                    for(var i = 0; i < aLi.length; i++){
+                        n3 += Number(aStrong[i].innerHTML);
+                        n4 += Number(aStrong[i].innerHTML) * parseFloat(aEm[i].innerHTML);
+                        if(n5 < parseFloat(aEm[i].innerHTML) && Number(aStrong[i].innerHTML) != 0){
+                            n5 = parseFloat(aEm[i].innerHTML);
+                        }
+                    }
+                    oP.innerHTML = '商品合计共：'+ n3 + '件，共花费了：' + n4 + '元<br />其中最贵的商品单价是：' + n5 + '元';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <ul id="list">
+        <li>
+            <input type="button" value="-" />
+            <strong>0</strong>
+            <input type="button" value="+" />
+            单价：<em>12.5元</em>
+            小计：<span>0元</span>
+        </li>
+        <li>
+            <input type="button" value="-" />
+            <strong>0</strong>
+            <input type="button" value="+" />
+            单价：<em>11.5元</em>
+            小计：<span>0元</span>
+        </li>
+        <li>
+            <input type="button" value="-" />
+            <strong>0</strong>
+            <input type="button" value="+" />
+            单价：<em>10.5元</em>
+            小计：<span>0元</span>
+        </li>
+        <li>
+            <input type="button" value="-" />
+            <strong>0</strong>
+            <input type="button" value="+" />
+            单价：<em>14.5元</em>
+            小计：<span>0元</span>
+        </li>
+        <li>
+            <input type="button" value="-" />
+            <strong>0</strong>
+            <input type="button" value="+" />
+            单价：<em>16元</em>
+            小计：<span>0元</span>
+        </li>
+    </ul>
+    <p>
+        商品合计共：0件，共花费了：0元<br />
+        其中最贵的商品单价是：0元
+    </p>
+</body>
+</html>

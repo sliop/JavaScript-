@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <script>
+        window.onload = function() {
+            var aInp = document.getElementsByTagName('input');
+            var str = '';
+            aInp[1].onclick = function(){
+                str = aInp[0].value;
+                if(str == ''){
+                    alert('QQ号码不能为空');
+                } else if(isNaN(str)){
+                    alert('QQ号码应由数字组成');
+                } else if( str.charAt(0) == 0){
+                    alert('QQ号码不能为0开头');
+                } else if(!(parseInt(str) == parseFloat(str))){
+                    alert('QQ号码不能是小数');
+                } else if(str.length < 5 || str.length > 10){
+                    alert('QQ号码必须在五位以上、10位以内');
+                };
+            };
+        };
+    </script>
+</head>
+<body>
+    <p>请输入QQ号码：<input type="text" />
+    <input type="button" value="判断">
+    </p>
+    <p>1、有没有输入</p>
+    <p>2、输入的是不是数字</p>
+    <p>3、不能有0在前面</p>
+    <p>4、不能是小数</p>
+    <p>5、输入的数字必须在5位以上、10位以内</p>
+</body>
+</html>
