@@ -2,7 +2,7 @@ window.onload = function() {
     var aImg = document.getElementsByTagName('img');
 
     for (var i = 0; i < aImg.length; i++) {
-        aImg[i].style.left = 10 + 110 * i +'px';
+        aImg[i].style.left = 100 + 110 * i +'px';
         aImg[i].top = parseInt(getStyle(aImg[i], 'top'));
         aImg[i].onmouseover = function() {
             shake(this, 'top');
