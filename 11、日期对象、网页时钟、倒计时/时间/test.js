@@ -13,9 +13,9 @@ window.onload = function() {
     fnTime(0, 0, 1, 2, 3, 4, 5, 6, 7);
     clearInterval(timer);
     timer = setInterval(function() {
-        fnTab(7);
-        fnTab(5);
         fnTab(2);
+        fnTab(5);
+        fnTab(7);
         for (var i = 0; i < str[0].length - 1; i++) {
             if(str[0][i] != str[1][i]) {
                 fnTab(i);
